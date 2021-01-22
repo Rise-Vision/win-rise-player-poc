@@ -3,6 +3,7 @@
 [Oo]bj/
 [Bb]in.netcore/
 [Oo]bj.netcore/
+[Rr]eleases/
 
 # mstest test results
 TestResults
