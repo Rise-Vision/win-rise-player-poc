@@ -13,7 +13,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1">
-            <wpf:ChromiumWebBrowser x:Name="Browser" Address="https://github.com">
+            <wpf:ChromiumWebBrowser x:Name="Browser" Address="https://github.com/Rise-Vision/widget-text">
             </wpf:ChromiumWebBrowser>
         </Border>
         <ProgressBar IsIndeterminate="{Binding IsLoading, ElementName=Browser}"
