@@ -13,13 +13,12 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Debug|x64.ActiveCfg = Debug|x64
-		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Debug|x64.Build.0 = Debug|x64
+		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Debug|x64.ActiveCfg = Debug|x86
 		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Debug|x86.ActiveCfg = Debug|x86
 		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Debug|x86.Build.0 = Debug|x86
-		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x64.ActiveCfg = Release|x64
-		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x64.Build.0 = Release|x64
-		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x86.ActiveCfg = Release|x64
+		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x64.ActiveCfg = Debug|x86
+		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x86.ActiveCfg = Debug|x86
+		{52E5502C-84BA-4FFD-BDD9-F070BF8CB464}.Release|x86.Build.0 = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

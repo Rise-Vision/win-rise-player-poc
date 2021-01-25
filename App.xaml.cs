@@ -1,5 +1,6 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
+using Squirrel;
 using System.Windows;
 
 namespace WinRisePlayerPOC
@@ -12,5 +13,16 @@ namespace WinRisePlayerPOC
 
             Cef.Initialize(settings, performDependencyCheck: true, browserProcessHandler: null);
         }
+
+        protected override async void OnStartup(StartupEventArgs args)
+        {
+            base.OnStartup(args);
+
+            using (var updateManager = UpdateManager.GitHubUpdateManager("https://github.com/Rise-Vision/win-rise-player-poc"))
+            {
+                await updateManager.Result.UpdateApp();
+            }
+        }
+
     }
 }
