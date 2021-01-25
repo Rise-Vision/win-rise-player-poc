@@ -18,9 +18,9 @@ namespace WinRisePlayerPOC
         {
             base.OnStartup(args);
 
-            using (var updateManager = new UpdateManager("C:\\Users\\Santiago\\Source\\Repos\\WinRisePlayerPOC\\Releases"))
+            using (var updateManager = UpdateManager.GitHubUpdateManager("https://github.com/Rise-Vision/win-rise-player-poc"))
             {
-                await updateManager.UpdateApp();
+                await updateManager.Result.UpdateApp();
             }
         }
 
