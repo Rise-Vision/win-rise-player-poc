@@ -1,0 +1,28 @@
+﻿<Window x:Class="WinPOC461.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:WinPOC461"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1">
+            <wpf:ChromiumWebBrowser x:Name="Browser" Address="https://github.com/Rise-Vision/rise-image">
+            </wpf:ChromiumWebBrowser>
+        </Border>
+        <ProgressBar IsIndeterminate="{Binding IsLoading, ElementName=Browser}"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Top"
+                     Width="Auto"
+                     Grid.Row="1"
+                     Height="2"
+                     Visibility="{Binding IsLoading, ElementName=Browser, Converter={StaticResource BooleanToVisibilityConverter}}"
+                     BorderThickness="0" />
+    </Grid>
+</Window>
