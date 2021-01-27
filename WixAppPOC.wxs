@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+	<Product Name='Wix App 1.0' Manufacturer='Rise Vision'
+        Id='E1722A49-390B-4026-9BA0-7648E0C2E643'
+        UpgradeCode='AA7F1BAF-A08D-464D-80DE-74E9AB45B7B9'
+        Language='1033' Codepage='1252' Version='1.0.0'
+    >
+		<Package Id='*' Keywords='Installer' Description="Wix App 1.0 Installer"
+			Comments='No comments'
+			Manufacturer='Rise Vision'
+			InstallerVersion='200'
+			Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+		<Media Id='1' Cabinet='product.cab' EmbedCab='yes'/>
+
+		<Directory Id='TARGETDIR' Name='SourceDir'>
+			<Directory Id='ProgramFilesFolder' Name='ProgramFiles'>
+				<Directory Id='RiseVision' Name='RiseVision'>
+					<Directory Id='INSTALLDIR' Name='WixAppPOC 1.0'>
+						<Component Id='ApplicationFiles' Guid='E938FFEF-DE18-4A99-ACAC-6E33D87DE406'>
+							<File Id='WixAppPOCEXE' Name='WixAppPOC.exe' DiskId='1' Source='.\bin\x64\Release\WixAppPOC.exe' KeyPath='yes'/>
+							<File Id='CefSharpBrowserSubprocessCoreDLL' Name='CefSharp.BrowserSubprocess.Core.dll' DiskId='1' Source='.\bin\x64\Release\CefSharp.BrowserSubprocess.Core.dll'/>
+							<File Id='CefSharpBrowserSubprocessEXE' Name='CefSharp.BrowserSubprocess.exe' DiskId='1' Source='.\bin\x64\Release\CefSharp.BrowserSubprocess.exe'/>
+							<File Id='CefSharpCoreDLL' Name='CefSharp.Core.dll' DiskId='1' Source='.\bin\x64\Release\CefSharp.Core.dll'/>
+							<File Id='CefSharpCoreXML' Name='CefSharp.Core.xml' DiskId='1' Source='.\bin\x64\Release\CefSharp.Core.xml'/>
+							<File Id='CefSharpWpfXML' Name='CefSharp.Wpf.XML' DiskId='1' Source='.\bin\x64\Release\CefSharp.Wpf.XML'/>
+							<File Id='CefSharpWpfDLL' Name='CefSharp.Wpf.dll' DiskId='1' Source='.\bin\x64\Release\CefSharp.Wpf.dll'/>
+							<File Id='CefSharpXML' Name='CefSharp.XML' DiskId='1' Source='.\bin\x64\Release\CefSharp.XML'/>
+							<File Id='CefSharpDLL' Name='CefSharp.dll' DiskId='1' Source='.\bin\x64\Release\CefSharp.dll'/>
+							<File Id='READMETXT' Name='README.txt' DiskId='1' Source='.\bin\x64\Release\README.txt'/>
+							<File Id='WixAppPOCEXECONFIG' Name='WixAppPOC.exe.config' DiskId='1' Source='.\bin\x64\Release\WixAppPOC.exe.config'/>
+							<File Id='cefPAK' Name='cef.pak' DiskId='1' Source='.\bin\x64\Release\cef.pak'/>
+							<File Id='cef_100_percentPAK' Name='cef_100_percent.pak' DiskId='1' Source='.\bin\x64\Release\cef_100_percent.pak'/>
+							<File Id='cef_200_percentPAK' Name='cef_200_percent.pak' DiskId='1' Source='.\bin\x64\Release\cef_200_percent.pak'/>
+							<File Id='cef_extensionsPAK' Name='cef_extensions.pak' DiskId='1' Source='.\bin\x64\Release\cef_extensions.pak'/>
+							<File Id='chromeelfDLL' Name='chrome_elf.dll' DiskId='1' Source='.\bin\x64\Release\chrome_elf.dll'/>
+							<File Id='d3dcompiler47DLL' Name='d3dcompiler_47.dll' DiskId='1' Source='.\bin\x64\Release\d3dcompiler_47.dll'/>
+							<File Id='devtoolsresourcesPAK' Name='devtools_resources.pak' DiskId='1' Source='.\bin\x64\Release\devtools_resources.pak'/>
+							<File Id='icudtlDAT' Name='icudtl.dat' DiskId='1' Source='.\bin\x64\Release\icudtl.dat'/>
+							<File Id='libEGLDLL' Name='libEGL.dll' DiskId='1' Source='.\bin\x64\Release\libEGL.dll'/>
+							<File Id='libGLESv2DLL' Name='libGLESv2.dll' DiskId='1' Source='.\bin\x64\Release\libGLESv2.dll'/>
+							<File Id='libcefDLL' Name='libcef.dll' DiskId='1' Source='.\bin\x64\Release\libcef.dll'/>
+							<File Id='snapshotblobBIN' Name='snapshot_blob.bin' DiskId='1' Source='.\bin\x64\Release\snapshot_blob.bin'/>
+							<File Id='v8contextsnapshotBIN' Name='v8_context_snapshot.bin' DiskId='1' Source='.\bin\x64\Release\v8_context_snapshot.bin'/>
+						</Component>
+
+						<Directory Id='locales' Name='locales'>
+							<Component Id='locales' Guid='AF3EF7CC-686E-4190-99D7-C88CCF01B75F'>
+								<File Id='enusPAK' Name='en-US.pak' DiskId='1' Source='.\bin\x64\Release\locales\en-US.pak'/>
+							</Component>
+						</Directory>
+
+						<Directory Id='swiftshader' Name='swiftshader'>
+							<Component Id='swiftshader' Guid='8F804741-39C9-46C1-9F47-1B673F2BFC23'>
+								<File Id='swiftshaderlibEGLDLL' Name='libEGL.dll' DiskId='1' Source='.\bin\x64\Release\swiftshader\libEGL.dll'/>
+								<File Id='swiftshaderlibGLESv2DLL' Name='libGLESv2.dll' DiskId='1' Source='.\bin\x64\Release\swiftshader\libGLESv2.dll'/>
+							</Component>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+
+			<Directory Id='ProgramMenuFolder' Name='Programs'>
+				<Directory Id='ProgramMenuDir' Name='WixAppPOC 1.0'>
+					<Component Id='ProgramMenuDir' Guid='E085E22D-0869-45F8-A872-EA0DA5A4CA2C'>
+						<RemoveFolder Id='ProgramMenuDir' On='uninstall'/>
+						<RegistryValue Root='HKCU'
+									   Key='Software\[Manufacturer]\[ProductName]'
+									   Type='string' Value='' KeyPath='yes'/>
+					</Component>
+				</Directory>
+			</Directory>
+
+			<Directory Id='DesktopFolder' Name='Desktop'/>
+		</Directory>
+
+		<Feature Id='MainFeature' Level='1'>
+			<ComponentRef Id='ApplicationFiles'/>
+			<ComponentRef Id='locales'/>
+			<ComponentRef Id='swiftshader'/>
+			<ComponentRef Id='ProgramMenuDir'/>
+		</Feature>
+	</Product>
+</Wix>
