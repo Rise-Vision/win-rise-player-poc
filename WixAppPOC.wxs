@@ -9,11 +9,15 @@
 			Comments='No comments'
 			Manufacturer='Rise Vision'
 			InstallerVersion='200'
-			Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+			Languages='1033'
+		    Compressed='yes'
+			SummaryCodepage='1252'
+		    InstallPrivileges='limited'
+        />
 		<Media Id='1' Cabinet='product.cab' EmbedCab='yes'/>
 
 		<Directory Id='TARGETDIR' Name='SourceDir'>
-			<Directory Id='ProgramFilesFolder' Name='ProgramFiles'>
+			<Directory Id='LocalAppDataFolder'>
 				<Directory Id='RiseVision' Name='RiseVision'>
 					<Directory Id='INSTALLDIR' Name='WixAppPOC 1.0'>
 						<Component Id='ApplicationFiles' Guid='E938FFEF-DE18-4A99-ACAC-6E33D87DE406'>
