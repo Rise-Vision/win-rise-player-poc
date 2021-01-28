@@ -40,6 +40,10 @@ x64/
 *.vssscc
 .builds
 *.nupkg
+*.wixobj
+*.wixpdb
+*.msi
+*.exe
 
 # Visual C++ cache files
 ipch/

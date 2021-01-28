@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+	<Product Name='Player Prerrequisites' Manufacturer='Rise Vision'
+        Id='93CAE626-A2A2-4BAD-AEB9-BDDA8E69C5A4'
+        UpgradeCode='2AF3FF7F-5FE5-4CFC-93EA-63828698B06E'
+        Language='1033' Codepage='1252' Version='1.0.0'
+    >
+		<Package Id='*' Description="Player Prerrequisites"
+			Manufacturer='Rise Vision'
+			InstallerVersion='200'
+			Languages='1033'
+		    Compressed='yes'
+			SummaryCodepage='1252'
+		    InstallPrivileges='limited'
+        />
+		<Media Id='1' Cabinet='product.cab' EmbedCab='yes'/>
+
+		<Directory Id='TARGETDIR' Name='SourceDir'>
+			<Directory Id='LocalAppDataFolder'>
+				<Directory Id='RiseVision' Name='RiseVision'>
+					<Directory Id='INSTALLDIR' Name='Prerrequisites'>
+						<Component Id='Prerrequisites' Guid='3DA4B871-80A6-4F0D-ADE5-1B6F52F8524F'>
+							<File Id='checkTXT' Name='check.exe' DiskId='1' Source='.\check.txt' KeyPath='yes'/>
+						</Component>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+
+		<Feature Id='MainFeature' Level='1'>
+			<ComponentRef Id='Prerrequisites'/>
+		</Feature>
+	</Product>
+</Wix>

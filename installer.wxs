@@ -1,0 +1,15 @@
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Bundle Name="Win POC Bundle 1.0" Manufacturer="Rise Vision"
+    Version="1.0.0"
+    UpgradeCode="C1847FDD-1D19-44A5-A3BF-E06CC70A871D"
+  >
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense"/>
+
+    <Chain>
+      <RollbackBoundary Id="Rollback"/>
+
+      <MsiPackage Id="Prerrequisites" SourceFile=".\prerrequisites.msi" Vital="yes"/>
+      <ExePackage Id="MainInstaller" SourceFile=".\Releases\Setup.exe" Vital="yes"/>
+    </Chain>
+  </Bundle>
+</Wix>
